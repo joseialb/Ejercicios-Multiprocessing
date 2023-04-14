@@ -33,19 +33,19 @@ def main(server_address, info):
         cl.terminate()
     print("end client")
     
-    if __name__ == 'main':
-        server_address = '127.0.0.1'
-        client_address = '127.0.0.1'
-        client_port = 6001
-        
-        if len(sys.argv) > 1:
-            client_port = int(sys.argv[1])
-        if len(sys.argv) > 2:
-            client_address = sys.argv[2]
-        if len(sys.argv > 3):
-            server_address = sys.argv[3]
-        info = {
-            'address': client_address,
-            'port' : client_port,
-            'authkey' : b'secret client server'}
-        main(server_address, infos)
+if __name__ == 'main':
+    server_address = '127.0.0.1'
+    client_address = '127.0.0.1'
+    client_port = 6001
+
+    if len(sys.argv) > 1:
+        client_port = int(sys.argv[1])
+    if len(sys.argv) > 2:
+        client_address = sys.argv[2]
+    if len(sys.argv > 3):
+        server_address = sys.argv[3]
+    info = {
+        'address': client_address,
+        'port' : client_port,
+        'authkey' : b'secret client server'}
+    main(server_address, info)
